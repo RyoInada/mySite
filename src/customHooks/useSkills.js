@@ -9,14 +9,14 @@ import {
 
 export const useSkills = () => {
   const [state, dispatch] = useReducer(skillReducer, initialState);
-  const GITHUB_API_TOKEN = process.env.REACT_APP_GITHUB_API_KEY;
+  // const api_token = process.env.REACT_APP_GITHUB_API_KEY;
 
   useEffect(() => {
     dispatch({ type: actionTypes.fetch });
     axios
       .get("https://api.github.com/user/repos", {
         headers: {
-          Authorization: `token ${GITHUB_API_TOKEN}`,
+          Authorization: `token ${process.env.REACT_APP_GITHUB_API_KEY}`,
         },
       })
       .then((response) => {
