@@ -9,7 +9,7 @@ import {
 
 export const useSkills = () => {
   const [state, dispatch] = useReducer(skillReducer, initialState);
-  const GITHUB_API_TOKEN = "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";
+  const GITHUB_API_TOKEN = "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";
 
   useEffect(() => {
     dispatch({ type: actionTypes.fetch });
