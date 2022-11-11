@@ -35,13 +35,13 @@ function App(props) {
         mainCoverOffset("main-cover");
       };
       window.addEventListener("scroll", () => {
-        setTimeout(binder, 100);
+        setTimeout(binder, 50);
       });
     }
   });
   return (
     <>
-      <Drawer />
+      <Drawer body={props.body} />
       <Darkmode body={props.body} />
       <div className="momentum-scroll">
         <Header />
