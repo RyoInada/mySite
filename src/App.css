@@ -455,7 +455,8 @@ li {
   left: 0;
   right: 0;
   z-index: 0;
-  transition: transform 0.5s ease-out;
+  /* transition: transform 0.6s ease-out; */
+  transition: transform 0.8s cubic-bezier(0.35, 0.89, 0.34, 0.96);
 }
 
 .momentum-shadow {
@@ -467,12 +468,18 @@ li {
 }
 
 .is-offset {
-  transition: background-position 0.5s ease-out;
+  transition: background-position 0.8s cubic-bezier(0.35, 0.89, 0.34, 0.96);
+  /* transition: background-position 0.7s ease-out; */
+}
+
+.ov-hidden {
+  overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {
   .drawer-open.js-drawer-content {
     width: 100vw;
+    height: 100lvh;
     padding-top: 3em;
     padding-left: 0;
   }

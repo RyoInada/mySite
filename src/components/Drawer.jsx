@@ -1,8 +1,10 @@
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { Link } from "react-scroll";
 
-export const Drawer = () => {
+export const Drawer = (props) => {
+  const body = props.body;
   const drawerTrigger = (e) => {
+    body.classList.toggle("ov-hidden");
     e.currentTarget.classList.toggle("is-opened");
     e.currentTarget.nextElementSibling.classList.toggle("drawer-open");
     e.currentTarget.nextElementSibling.nextElementSibling.classList.toggle(
@@ -10,6 +12,7 @@ export const Drawer = () => {
     );
   };
   const drawerClose = () => {
+    body.classList.toggle("ov-hidden");
     const button = document.querySelector(".is-opened");
     const drawer = document.querySelectorAll(".drawer-open");
     button.classList.remove("is-opened");
