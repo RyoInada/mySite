@@ -428,7 +428,7 @@ li {
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
   opacity: 0;
-  transition: opacity 0.6s;
+  transition: opacity 0.8s;
 }
 .drawer-open.js-drawer-bg {
   width: 100vw;
@@ -447,6 +447,27 @@ li {
 
 .social-icon {
   color: var(--main-font-color);
+}
+
+.momentum-scroll-on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  transition: transform 0.5s ease-out;
+}
+
+.momentum-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.is-offset {
+  transition: background-position 0.5s ease-out;
 }
 
 @media screen and (max-width: 768px) {
