@@ -1,22 +1,12 @@
-import CoverImage from "../images/cover-image2.jpg";
 import ProfileImage from "../images/profile-image.png";
-import {
-  // FaTwitter,
-  FaGithub,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaGithub, FaInstagram } from "react-icons/fa";
 
 export const Header = () => {
   return (
-    <header
-      className="main-cover"
-      style={{ backgroundImage: `url(${CoverImage})` }}
-    >
-      <div className="overlay"></div>
+    <header>
       <div className="container">
         <div className="display-table">
           <div className="display-table-contents">
-            {/* カバー画像 */}
             <div
               className="profile-thumb"
               style={{ backgroundImage: `url(${ProfileImage})` }}

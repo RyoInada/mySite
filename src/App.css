@@ -101,13 +101,14 @@ li {
   width: 100%;
 }
 
-.main-cover .overlay {
+.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background: var(--main-overlay-color);
+  height: 100vh;
 }
 
 .profile-thumb {
@@ -193,6 +194,11 @@ li {
   justify-content: center;
   margin-bottom: 2em;
 }
+
+.works-container {
+  margin-bottom: 2em;
+}
+
 .skills-container:last-of-type {
   margin-bottom: 0;
 }
@@ -455,8 +461,8 @@ li {
   left: 0;
   right: 0;
   z-index: 0;
-  /* transition: transform 0.6s ease-out; */
-  transition: transform 0.8s cubic-bezier(0.35, 0.89, 0.34, 0.96);
+  /* transition: transform 0.05s ease-out; */
+  transition: transform 0.05s cubic-bezier(0.35, 0.89, 0.34, 0.96);
 }
 
 .momentum-shadow {
@@ -468,7 +474,7 @@ li {
 }
 
 .is-offset {
-  transition: background-position 0.8s cubic-bezier(0.35, 0.89, 0.34, 0.96);
+  /* transition: background-position 0.8s cubic-bezier(0.35, 0.89, 0.34, 0.96); */
   /* transition: background-position 0.7s ease-out; */
 }
 
@@ -476,7 +482,38 @@ li {
   overflow: hidden;
 }
 
+.about-content {
+  margin: 0 auto;
+}
+.about-content p {
+  display: block;
+  text-align: center;
+  margin: 5px 0;
+}
+.about-content .about-item {
+  font-weight: 700;
+}
+.about-content .about-item::after {
+  display: inline;
+  content: ":";
+  margin: 0 1%;
+}
+
 @media screen and (max-width: 768px) {
+  .about-content p {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-content .about-item::after {
+    display: none;
+  }
+  .momentum-scroll {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
   .drawer-open.js-drawer-content {
     width: 100vw;
     height: 100lvh;

@@ -41,7 +41,7 @@ export const Skills = () => {
             <p className="description">
               <strong>PHP</strong>
             </p>
-            <Circle animate progress="40" />
+            <Circle animate progress="50" />
           </div>
           <div className="skill-item">
             <p className="description">
