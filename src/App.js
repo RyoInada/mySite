@@ -11,24 +11,28 @@ import { Maincover } from "./components/Maincover";
 
 function App(props) {
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.innerWidth > 768) {
-        const target = document.querySelector(".momentum-scroll");
+    if (window.innerWidth > 768) {
+      const target = document.querySelector(".momentum-scroll");
+      let lastHeight = 0;
+      const momentumScroll = (target) => {
         const targetHeight = target.clientHeight;
-        const targetShadow = document.createElement("div");
+        if (lastHeight < targetHeight) {
+          const targetShadow = document.createElement("div");
+          targetShadow.classList.add("momentum-shadow");
+          target.before(targetShadow);
+          targetShadow.style.height = `${targetHeight}px`;
+          lastHeight = targetHeight;
+        }
+        target.classList.add("momentum-scroll-on");
+        const currentPosition = 0 - window.pageYOffset;
+        target.style.transform = `translate(0, ${currentPosition}px)`;
+      };
 
-        targetShadow.classList.add("momentum-shadow");
-        target.before(targetShadow);
-        targetShadow.style.height = `${targetHeight}px`;
-        const momentumScroll = (target) => {
-          target.classList.add("momentum-scroll-on");
-          const currentPosition = 0 - window.pageYOffset;
-          target.style.transform = `translate(0, ${currentPosition}px)`;
-        };
-
-        setTimeout(momentumScroll, 0, target);
-      }
-    });
+      momentumScroll(target);
+      window.addEventListener("scroll", () => {
+        momentumScroll(target);
+      });
+    }
     window.addEventListener("resize", () => {
       document.location.reload();
     });
