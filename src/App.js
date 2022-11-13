@@ -15,10 +15,6 @@ function App(props) {
       const target = document.querySelector(".momentum-scroll");
       let lastHeight = 0;
       const momentumScroll = (target) => {
-        const rightArrow = document.querySelectorAll(".slider-right");
-        rightArrow.forEach((e) => {
-          e.click();
-        });
         const targetHeight = target.clientHeight;
         if (lastHeight < targetHeight) {
           const targetShadow = document.createElement("div");
@@ -39,6 +35,12 @@ function App(props) {
     }
     window.addEventListener("resize", () => {
       document.location.reload();
+    });
+    window.addEventListener("load", () => {
+      const rightArrow = document.querySelectorAll(".slider-right");
+      rightArrow.forEach((e) => {
+        e.click();
+      });
     });
   });
   return (
