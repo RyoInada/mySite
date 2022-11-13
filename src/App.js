@@ -22,18 +22,6 @@ function App(props) {
           target.before(targetShadow);
           targetShadow.style.height = `${targetHeight}px`;
           lastHeight = targetHeight;
-          const workImage = document.querySelectorAll(".workcard-image");
-          let imageHeight = 0;
-          workImage.forEach((el) => {
-            if (el.clientHeight > imageHeight) {
-              imageHeight = el.clientHeight;
-            }
-          });
-          const carousel3d = document.querySelectorAll(".react-3d-carousel");
-          carousel3d.forEach((el) => {
-            el.style.height = imageHeight;
-            console.log(imageHeight + "added");
-          });
         }
         target.classList.add("momentum-scroll-on");
         const currentPosition = 0 - window.pageYOffset;
