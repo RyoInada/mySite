@@ -22,7 +22,13 @@ function App(props) {
           target.before(targetShadow);
           targetShadow.style.height = `${targetHeight}px`;
           lastHeight = targetHeight;
-          const imageHeight = document.querySelectorAll(".workcard-image");
+          const workImage = document.querySelectorAll(".workcard-image");
+          let imageHeight = 0;
+          workImage.forEach((el) => {
+            if (el.clientHeight > imageHeight) {
+              imageHeight = el.clientHeight;
+            }
+          });
           const carousel3d = document.querySelectorAll(".react-3d-carousel");
           carousel3d.forEach((el) => {
             el.style.height = imageHeight;
