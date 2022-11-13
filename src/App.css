@@ -178,7 +178,7 @@ li {
 
 #skills,
 #works {
-  padding: 2em 0;
+  padding: 2em 0 0;
   clear: both;
 }
 
@@ -282,10 +282,6 @@ li {
   opacity: 0;
   transition: max-height 0.4s ease, opacity 0.5s ease;
 }
-.js-accordion-children .workcard {
-  margin: 0;
-  padding: 0;
-}
 
 .js-accordion-children.accordion-open {
   visibility: visible;
@@ -295,19 +291,33 @@ li {
   transition: max-height 1s ease, opacity 0.5s ease;
 }
 
-.accordion-open .workcard {
+.workcard {
+  margin: 0;
+  padding: 0;
+  position: relative;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  padding: 1em 0;
-  margin: 1em 0;
-  box-shadow: 1px 1px 10px var(--main-font-color);
-  animation: 12s floating infinite;
+  justify-content: center;
 }
 
-.accordion-open .workcard:hover {
-  opacity: 0.8;
+.workcard:hover {
+  opacity: 1 !important;
+}
+.workcard:hover .workcard-image {
+  filter: brightness(0.4);
+}
+
+.workcard:hover .workcard-text {
+  opacity: 1;
+}
+
+.workcard-text {
+  position: absolute;
+  display: block;
+  width: max-content;
+  top: calc(50% - 2em);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .js-darkmode {
@@ -462,7 +472,7 @@ li {
   right: 0;
   z-index: 0;
   /* transition: transform 0.05s ease-out; */
-  transition: transform 0.05s cubic-bezier(0.35, 0.89, 0.34, 0.96);
+  transition: transform 0.3s cubic-bezier(0.35, 0.89, 0.34, 0.96);
 }
 
 .momentum-shadow {
@@ -497,6 +507,33 @@ li {
   display: inline;
   content: ":";
   margin: 0 1%;
+}
+
+.react-3d-carousel .slider-container .slider-right div,
+.react-3d-carousel .slider-container .slider-left div {
+  border-color: var(--secondary-btn-color) !important;
+  padding: 5px !important;
+}
+.react-3d-carousel .slider-container .slider-right div::after,
+.react-3d-carousel .slider-container .slider-left div::after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid var(--secondary-btn-color);
+  border-right: 3px solid var(--secondary-btn-color);
+}
+.react-3d-carousel .slider-container .slider-right div::after {
+  transform: rotate(45deg);
+}
+
+.react-3d-carousel .slider-container .slider-left div::after {
+  transform: rotate(225deg);
+}
+
+#works .container {
+  width: 100%;
+  padding: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -563,7 +600,8 @@ li {
     justify-content: space-evenly;
     align-items: center;
   }
+
   .workcard-text {
-    width: 90%;
+    display: none;
   }
 }

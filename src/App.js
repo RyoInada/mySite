@@ -11,27 +11,24 @@ import { Maincover } from "./components/Maincover";
 
 function App(props) {
   useEffect(() => {
-    if (window.innerWidth > 768) {
-      const target = document.querySelector(".momentum-scroll");
-      const momentumScroll = (target) => {
+    window.addEventListener("scroll", () => {
+      if (window.innerWidth > 768) {
+        const target = document.querySelector(".momentum-scroll");
         const targetHeight = target.clientHeight;
         const targetShadow = document.createElement("div");
 
         targetShadow.classList.add("momentum-shadow");
         target.before(targetShadow);
         targetShadow.style.height = `${targetHeight}px`;
-        target.classList.add("momentum-scroll-on");
-        const currentPosition = 0 - window.pageYOffset;
-        target.style.transform = `translate(0, ${currentPosition}px)`;
-      };
+        const momentumScroll = (target) => {
+          target.classList.add("momentum-scroll-on");
+          const currentPosition = 0 - window.pageYOffset;
+          target.style.transform = `translate(0, ${currentPosition}px)`;
+        };
 
-      const binder = () => {
-        momentumScroll(target);
-      };
-      window.addEventListener("scroll", () => {
-        setTimeout(binder, 0);
-      });
-    }
+        setTimeout(momentumScroll, 0, target);
+      }
+    });
     window.addEventListener("resize", () => {
       document.location.reload();
     });

@@ -1,5 +1,10 @@
 import { WorkCard } from "./WorkCard";
-import ProfileImage from "../images/profile-image.png";
+import PigeonImage from "../images/pigeon.png";
+import TimelessImage from "../images/timeless.png";
+import ZokujinImage from "../images/zokujin.png";
+import SprImage from "../images/spr.png";
+import ColonyImage from "../images/colony.png";
+import PvImage from "../images/pv.png";
 import { Carousel } from "3d-react-carousal";
 
 export const Works = () => {
@@ -10,55 +15,43 @@ export const Works = () => {
   let shopifySlide = [
     <WorkCard
       title="Pigeon"
-      image={ProfileImage}
+      image={PigeonImage}
       roll="frontend engineer"
-      language="html/css/javascript/liquid"
-      description="this is test"
-      url="https//test.com"
+      url="https://shop.pigeon.co.jp/"
     />,
     <WorkCard
       title="Timeless comfort"
-      image={ProfileImage}
+      image={TimelessImage}
       roll="frontend engineer"
-      language="html/css/javascript/liquid"
-      description="this is test"
-      url="https//test.com"
+      url="https://timelesscomfort.com/"
     />,
   ];
   let wordpressSlide = [
     <WorkCard
       title="Zokujin"
-      image={ProfileImage}
+      image={ZokujinImage}
       roll="frontend engineer"
-      language="html/css/javascript/liquid"
-      description="this is test"
-      url="https//test.com"
+      url="https://zokujin.com/"
     />,
     <WorkCard
       title="DELUJO"
-      image={ProfileImage}
+      image={SprImage}
       roll="frontend engineer"
-      language="html/css/javascript/liquid"
-      description="this is test"
-      url="https//test.com"
+      url="https://delujospr.com/"
     />,
   ];
   let otherSlide = [
     <WorkCard
       title="Colony Interactive"
-      image={ProfileImage}
+      image={ColonyImage}
       roll="frontend engineer"
-      language="html/css/javascript/liquid"
-      description="this is test"
-      url="https//test.com"
+      url="https://recruit.colony-i.com/"
     />,
     <WorkCard
       title="PourVous"
-      image={ProfileImage}
+      image={PvImage}
       roll="frontend engineer"
-      language="html/css/javascript/liquid"
-      description="this is test"
-      url="https//test.com"
+      url="https://www.pourvous.co.jp/corporate/"
     />,
   ];
   return (
@@ -71,19 +64,19 @@ export const Works = () => {
           <h3>Shopify</h3>
         </div>
         <div className="works-container">
-          <Carousel slides={shopifySlide} autoplay={true} interval={5000} />
+          <Carousel slides={shopifySlide} />
         </div>
         <div className="heading">
           <h3>Wordpress</h3>
         </div>
         <div className="works-container">
-          <Carousel slides={wordpressSlide} autoplay={true} interval={5000} />
+          <Carousel slides={wordpressSlide} />
         </div>
         <div className="heading">
           <h3>Others</h3>
         </div>
         <div className="works-container">
-          <Carousel slides={otherSlide} autoplay={true} interval={5000} />
+          <Carousel slides={otherSlide} />
         </div>
       </div>
     </div>

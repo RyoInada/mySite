@@ -1,4 +1,4 @@
-import ProfileImage from "../images/profile-image.png";
+import ProfileImage from "../images/profile-image.jpg";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 
 export const Header = () => {
