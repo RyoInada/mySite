@@ -26,6 +26,7 @@ function App(props) {
           const carousel3d = document.querySelectorAll(".react-3d-carousel");
           carousel3d.forEach((el) => {
             el.style.height = imageHeight;
+            console.log(imageHeight + "added");
           });
         }
         target.classList.add("momentum-scroll-on");
