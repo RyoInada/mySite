@@ -35,12 +35,15 @@ export const About = () => {
               {getAge(birthday)}yo
             </p>
             <p>
-              <span className="about-item">FInal education</span>Shizuoka
-              Univercity/Faculty of infomatics
+              <span className="about-item">Live in</span>Fukuoka, Japan
             </p>
             <p>
               <span className="about-item">Hobby</span>
               Workout/Music/Site production
+            </p>
+            <p>
+              <span className="about-item">FInal education</span>Shizuoka
+              Univercity/Faculty of infomatics
             </p>
           </div>
         </div>
