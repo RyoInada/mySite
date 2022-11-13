@@ -22,6 +22,11 @@ function App(props) {
           target.before(targetShadow);
           targetShadow.style.height = `${targetHeight}px`;
           lastHeight = targetHeight;
+          const imageHeight = document.querySelectorAll(".workcard-image");
+          const carousel3d = document.querySelectorAll(".react-3d-carousel");
+          carousel3d.forEach((el) => {
+            el.style.height = imageHeight;
+          });
         }
         target.classList.add("momentum-scroll-on");
         const currentPosition = 0 - window.pageYOffset;
