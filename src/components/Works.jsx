@@ -64,19 +64,19 @@ export const Works = () => {
           <h3>Shopify</h3>
         </div>
         <div className="works-container">
-          <Carousel slides={shopifySlide} />
+          <Carousel slides={shopifySlide} autoplay={false} />
         </div>
         <div className="heading">
           <h3>Wordpress</h3>
         </div>
         <div className="works-container">
-          <Carousel slides={wordpressSlide} />
+          <Carousel slides={wordpressSlide} autoplay={false} />
         </div>
         <div className="heading">
           <h3>Others</h3>
         </div>
         <div className="works-container">
-          <Carousel slides={otherSlide} />
+          <Carousel slides={otherSlide} autoplay={false} />
         </div>
       </div>
     </div>
