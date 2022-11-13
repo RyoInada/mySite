@@ -512,7 +512,8 @@ li {
 .react-3d-carousel .slider-container .slider-right div,
 .react-3d-carousel .slider-container .slider-left div {
   border-color: var(--secondary-btn-color) !important;
-  padding: 5px !important;
+  padding: 10px 8px !important;
+  background: var(--main-bg-color);
 }
 .react-3d-carousel .slider-container .slider-right div::after,
 .react-3d-carousel .slider-container .slider-left div::after {
@@ -525,10 +526,14 @@ li {
 }
 .react-3d-carousel .slider-container .slider-right div::after {
   transform: rotate(45deg);
+  position: relative;
+  right: 2px;
 }
 
 .react-3d-carousel .slider-container .slider-left div::after {
   transform: rotate(225deg);
+  position: relative;
+  left: 2px;
 }
 
 #works .container {
