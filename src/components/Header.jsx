@@ -15,12 +15,20 @@ export const Header = () => {
             <h3 className="title-text">Frontend Engineer,Creator</h3>
             <ul className="social-icons">
               <li className="icon-link">
-                <a href="https://github.com/">
+                <a
+                  href="https://github.com/RyoInada"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaGithub color="white" size="2rem" />
                 </a>
               </li>
               <li className="icon-link">
-                <a href="https://instagram.com/">
+                <a
+                  href="https://www.instagram.com/ryo_inada/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaInstagram color="white" size="2rem" />
                 </a>
               </li>
