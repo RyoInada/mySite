@@ -35,7 +35,9 @@ function App(props) {
       });
     }
     window.addEventListener("resize", () => {
-      document.location.reload();
+      if (window.innerWidth > 768) {
+        document.location.reload();
+      }
     });
   });
   return (
