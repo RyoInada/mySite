@@ -16,6 +16,11 @@ body {
   );
   --secondary-font-color: #fff;
   --secondary-btn-color: rgba(24, 160, 184);
+  --main-shadow-color: rgba(24, 160, 184, 0.5);
+  --main-cloud-color: rgb(158, 220, 231);
+  --main-star-color: rgba(24, 160, 184);
+  --main-starlf-color: rgb(14, 124, 144);
+
   color: var(--main-font-color);
   background: var(--main-bg-color);
 }
@@ -35,6 +40,10 @@ body.darkmode {
   /* --main-overlay-color: rgba(9, 82, 134, 0.6); */
   --secondary-font-color: #fff;
   --secondary-btn-color: #fff;
+  --main-shadow-color: rgba(255, 255, 255, 0.7);
+  --main-cloud-color: rgb(125, 157, 163);
+  --main-star-color: rgb(158, 220, 231);
+  --main-starlf-color: rgb(255, 255, 255);
 }
 
 .darkmode text {
@@ -89,6 +98,23 @@ li {
   }
   50% {
     transform: translateY(-5px);
+  }
+}
+
+@keyframes flowleft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes flowright {
+  0% {
+    transform: translateX(-100%) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) rotate(180deg);
   }
 }
 
@@ -196,7 +222,8 @@ li {
 }
 
 .works-container {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
+  padding: 0 5%;
 }
 
 .skills-container:last-of-type {
@@ -297,6 +324,7 @@ li {
   position: relative;
   display: flex;
   justify-content: center;
+  transform: translateZ(1px);
 }
 
 .workcard:hover {
@@ -304,6 +332,10 @@ li {
 }
 .workcard:hover .workcard-image {
   filter: brightness(0.4);
+}
+
+.workcard-image {
+  border: 1px solid var(--main-font-color);
 }
 
 .workcard:hover .workcard-text {
@@ -509,38 +541,84 @@ li {
   margin: 0 1%;
 }
 
-.react-3d-carousel .slider-container .slider-right div,
-.react-3d-carousel .slider-container .slider-left div {
-  border-color: var(--secondary-btn-color) !important;
-  padding: 10px 8px !important;
-  background: var(--main-bg-color);
-}
-.react-3d-carousel .slider-container .slider-right div::after,
-.react-3d-carousel .slider-container .slider-left div::after {
-  display: block;
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-top: 3px solid var(--secondary-btn-color);
-  border-right: 3px solid var(--secondary-btn-color);
-}
-.react-3d-carousel .slider-container .slider-right div::after {
-  transform: rotate(45deg);
-  position: relative;
-  right: 2px;
-}
-
-.react-3d-carousel .slider-container .slider-left div::after {
-  transform: rotate(225deg);
-  position: relative;
-  left: 2px;
-}
-
 #works .container {
   width: 100%;
   padding: 0;
 }
 
+.slide-image img,
+.mySwiperNav img,
+.mySwiper img {
+  max-width: 100%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  padding: 0 5%;
+  color: var(--main-font-color);
+  background: var(--main-bg-color);
+  font-size: 200% !important;
+  border: 1px solid var(--main-font-color);
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: -5% !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  border: 2px solid var(--main-bg-color);
+  background: var(--main-font-color, #fff) !important;
+  opacity: 0.8 !important;
+}
+
+#skills {
+  position: relative;
+}
+
+.backtext {
+  position: absolute;
+  top: 30%;
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.backgrounds-star {
+  fill: var(--main-star-color);
+}
+.backgrounds-starlf {
+  fill: var(--main-starlf-color);
+}
+.backgrounds-cloud {
+  fill: var(--main-cloud-color);
+}
+.backgrounds-font {
+  font-size: 10em;
+  display: flex;
+  width: fit-content;
+  color: var(--main-bg-color);
+  text-shadow: 1px 1px 10px var(--main-shadow-color);
+  white-space: nowrap;
+  line-height: 1em;
+  font-weight: bold;
+  /* animation: flowleft 150s infinite; */
+}
+.backgrounds-font span {
+  display: block;
+  width: fit-content;
+  animation: flowleft 80s linear infinite;
+}
+.backgrounds-font span:nth-of-type(2) {
+  animation-delay: 80s;
+}
+
+.font-reverse span {
+  transform: rotate(180deg);
+  animation: flowright 80s linear infinite;
+}
 @media screen and (max-width: 768px) {
   .about-content p {
     display: flex;
@@ -608,5 +686,10 @@ li {
 
   .workcard-text {
     display: none;
+  }
+
+  .swiper-pagination {
+    position: relative;
+    bottom: -15% !important;
   }
 }

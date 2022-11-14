@@ -7,6 +7,7 @@ import {
   FaShopify,
 } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
+import { Backtext } from "./Backtext";
 
 export const Skills = () => {
   return (
@@ -97,6 +98,7 @@ export const Skills = () => {
           </div>
         </div>
       </div>
+      <Backtext />
     </div>
   );
 };
