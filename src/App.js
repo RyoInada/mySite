@@ -8,6 +8,7 @@ import { Drawer } from "./components/Drawer";
 import { Darkmode } from "./components/Darkmode";
 import { useEffect } from "react";
 import { Maincover } from "./components/Maincover";
+// import { Backgrounds } from "./components/Backgrounds";
 
 function App(props) {
   useEffect(() => {
@@ -36,12 +37,6 @@ function App(props) {
     window.addEventListener("resize", () => {
       document.location.reload();
     });
-    window.addEventListener("load", () => {
-      const rightArrow = document.querySelectorAll(".slider-right");
-      rightArrow.forEach((e) => {
-        e.click();
-      });
-    });
   });
   return (
     <>
@@ -54,6 +49,7 @@ function App(props) {
         <Skills />
         <Works />
         <Contact />
+        {/* <Backgrounds /> */}
       </div>
     </>
   );
