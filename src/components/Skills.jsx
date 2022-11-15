@@ -56,25 +56,25 @@ export const Skills = () => {
         </div>
         <div className="skills-container">
           <div className="skill-item">
-            <FaNodeJs className="social-icon" size="4rem" />
+            <FaNodeJs className="social-icon" size="65px" />
             <p className="description">
               <strong>Node.js</strong>
             </p>
           </div>
           <div className="skill-item">
-            <FaReact className="social-icon" size="4rem" />
+            <FaReact className="social-icon" size="65px" />
             <p className="description">
               <strong>React.js</strong>
             </p>
           </div>
           <div className="skill-item">
-            <FaSass className="social-icon" size="4rem" />
+            <FaSass className="social-icon" size="65px" />
             <p className="description">
               <strong>Scss/Sass</strong>
             </p>
           </div>
           <div className="skill-item">
-            <SiTailwindcss className="social-icon" size="4rem" />
+            <SiTailwindcss className="social-icon" size="65px" />
             <p className="description">
               <strong>Tailwind.css</strong>
             </p>
@@ -85,13 +85,13 @@ export const Skills = () => {
         </div>
         <div className="skills-container">
           <div className="skill-item">
-            <FaShopify className="social-icon" size="4rem" />
+            <FaShopify className="social-icon" size="65px" />
             <p className="description">
               <strong>Shopify</strong>
             </p>
           </div>
           <div className="skill-item">
-            <FaWordpress className="social-icon" size="4rem" />
+            <FaWordpress className="social-icon" size="65px" />
             <p className="description">
               <strong>Wordpress</strong>
             </p>

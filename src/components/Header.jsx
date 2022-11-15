@@ -20,7 +20,7 @@ export const Header = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <FaGithub color="white" size="2rem" />
+                  <FaGithub color="white" size="35px" />
                 </a>
               </li>
               <li className="icon-link">
@@ -29,7 +29,7 @@ export const Header = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <FaInstagram color="white" size="2rem" />
+                  <FaInstagram color="white" size="35px" />
                 </a>
               </li>
             </ul>

@@ -62,7 +62,7 @@ export const Drawer = (props) => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaGithub className="social-icon" size="2rem" />
+              <FaGithub className="social-icon" size="35px" />
             </a>
           </li>
           <li className="icon-link">
@@ -71,7 +71,7 @@ export const Drawer = (props) => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaInstagram className="social-icon" size="2rem" />
+              <FaInstagram className="social-icon" size="35px" />
             </a>
           </li>
         </ul>

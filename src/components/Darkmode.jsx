@@ -9,8 +9,8 @@ export const Darkmode = (props) => {
   return (
     <div className="js-darkmode" onClick={darkmodeSwitch}>
       <div className="darkmode-toggle">
-        <FaSun color="#18a0b8" size="0.7em" className="fa-sun" />
-        <FaRegMoon color="#18a0b8" size="1.2rem" className="fa-regmoon" />
+        <FaSun color="#18a0b8" size="25px" className="fa-sun" />
+        <FaRegMoon color="#18a0b8" size="20px" className="fa-regmoon" />
       </div>
     </div>
   );
