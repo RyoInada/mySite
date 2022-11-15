@@ -1,10 +1,10 @@
 import { WorkCard } from "./WorkCard";
-import PigeonImage from "../images/pigeon.png";
-import TimelessImage from "../images/timeless.png";
-import ZokujinImage from "../images/zokujin.png";
-import SprImage from "../images/spr.png";
-import ColonyImage from "../images/colony.png";
-import PvImage from "../images/pv.png";
+import PigeonImage from "../images/pigeon.webp";
+import TimelessImage from "../images/timeless.webp";
+import ZokujinImage from "../images/zokujin.webp";
+import SprImage from "../images/spr.webp";
+import ColonyImage from "../images/colony.webp";
+import PvImage from "../images/pv.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";

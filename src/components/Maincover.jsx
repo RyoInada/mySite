@@ -1,4 +1,4 @@
-import CoverImage from "../images/cover-image2.jpg";
+import CoverImage from "../images/cover-image2.webp";
 
 export const Maincover = () => {
   return (
