@@ -620,6 +620,10 @@ li {
   animation: flowright 80s linear infinite;
 }
 @media screen and (max-width: 768px) {
+  .main-cover {
+    background-size: auto;
+  }
+
   .about-content p {
     display: flex;
     flex-direction: column;
@@ -691,5 +695,9 @@ li {
   .swiper-pagination {
     position: relative;
     bottom: -15% !important;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    display: none;
   }
 }
