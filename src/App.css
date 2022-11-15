@@ -1,4 +1,6 @@
 body {
+}
+#root {
   font-family: Arial, serif;
   font-weight: 400;
   font-size: 32px;
@@ -25,7 +27,7 @@ body {
   background: var(--main-bg-color);
 }
 
-body.darkmode {
+#root.darkmode {
   --main-bg-color: rgba(10, 22, 61, 0.92);
   --main-font-color: #fff;
   --secondary-bg-color: rgb(9, 82, 134);
@@ -44,6 +46,10 @@ body.darkmode {
   --main-cloud-color: rgb(125, 157, 163);
   --main-star-color: rgb(158, 220, 231);
   --main-starlf-color: rgb(255, 255, 255);
+}
+
+body:has(.darkmode) {
+  background: rgba(10, 22, 61, 0.92);
 }
 
 .darkmode text {
@@ -426,7 +432,6 @@ li {
   background: var(--secondary-btn-color);
   transition: transform 0.8s, opacity 0.8s;
   will-change: filter;
-  transform: translateZ(0);
 }
 
 .is-opened {
@@ -434,7 +439,7 @@ li {
 }
 
 .is-opened .drawer-top {
-  transform: rotate(45deg) translateY(10px);
+  transform: rotate(45deg) translateY(10px) translateZ(0);
 }
 .is-opened .drawer-middle {
   opacity: 0;
@@ -443,7 +448,7 @@ li {
   border: 0;
 }
 .is-opened .drawer-bottom {
-  transform: rotate(-45deg) translateY(-10px);
+  transform: rotate(-45deg) translateY(-10px) translateZ(0);
 }
 
 .js-drawer-content {

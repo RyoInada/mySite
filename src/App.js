@@ -44,7 +44,7 @@ function App(props) {
     <>
       <Maincover />
       <Drawer body={props.body} />
-      <Darkmode body={props.body} />
+      <Darkmode root={props.root} />
       <div className="momentum-scroll">
         <Header />
         <About />
