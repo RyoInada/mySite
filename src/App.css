@@ -641,7 +641,7 @@ li {
   .drawer-open.js-drawer-content {
     width: 100vw;
     height: 100lvh;
-    /* padding-top: 3em; */
+    padding-top: 0em;
     padding-left: 0;
   }
   .drawer-open.js-drawer-content ul {
