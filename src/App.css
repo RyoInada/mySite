@@ -425,6 +425,8 @@ li {
   border: 2px solid var(--main-bg-color);
   background: var(--secondary-btn-color);
   transition: transform 0.8s, opacity 0.8s;
+  will-change: filter;
+  transform: translateZ(0);
 }
 
 .is-opened {
@@ -699,5 +701,15 @@ li {
   .swiper-button-next:after,
   .swiper-button-prev:after {
     display: none;
+  }
+  .workcard:hover .workcard-image {
+    filter: brightness(1);
+    opacity: 1;
+  }
+
+  .swiper-slide,
+  .swiper-wrapper {
+    will-change: filter;
+    transform: translateZ(0);
   }
 }
