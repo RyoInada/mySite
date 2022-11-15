@@ -3,7 +3,7 @@ import { FaSun, FaRegMoon } from "react-icons/fa";
 export const Darkmode = (props) => {
   const darkmodeSwitch = (e) => {
     e.currentTarget.classList.toggle("is-dark");
-    const docBody = props.body;
+    const docBody = props.root;
     docBody.classList.toggle("darkmode");
   };
   return (
