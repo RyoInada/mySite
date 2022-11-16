@@ -10,6 +10,9 @@ export const Maincover = () => {
           src={StarRotateMp4}
           type="video/mp4"
           media="(max-width: 768px)"
+          autoPlay
+          playsInline
+          loop
         />
       </video>
       <div className="overlay"></div>
