@@ -724,4 +724,15 @@ li {
     will-change: filter;
     transform: translateZ(0);
   }
+  .drawer-top,
+  .drawer-middle,
+  .drawer-bottom {
+    height: 8px;
+  }
+  .is-opened .drawer-top {
+    transform: rotate(45deg) translateY(8px) translateZ(0);
+  }
+  .is-opened .drawer-bottom {
+    transform: rotate(-45deg) translateY(-8px) translateZ(0);
+  }
 }
