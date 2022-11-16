@@ -10,9 +10,9 @@ body {
   --secondary-bg-color: rgba(24, 160, 184);
   --main-overlay-color: linear-gradient(
     190deg,
-    rgba(24, 160, 184, 0.9),
+    rgba(24, 160, 184, 0.6),
     72%,
-    rgba(255, 255, 126, 0.6),
+    rgba(255, 255, 126, 0.4),
     97%,
     rgba(203, 121, 33, 0.8)
   );
@@ -32,12 +32,12 @@ body {
   --main-font-color: #fff;
   --secondary-bg-color: rgb(9, 82, 134);
   --main-overlay-color: linear-gradient(
-    170deg,
-    rgba(9, 82, 134, 0.9),
+    10deg,
+    rgba(9, 82, 134, 0.3),
     72%,
-    rgba(23, 147, 255, 0.6),
-    97%,
-    rgba(24, 160, 184, 0.9)
+    rgba(23, 147, 255, 0.3),
+    88%,
+    rgba(24, 160, 184, 0.7)
   );
   /* --main-overlay-color: rgba(9, 82, 134, 0.6); */
   --secondary-font-color: #fff;
@@ -626,6 +626,13 @@ li {
   transform: rotate(180deg);
   animation: flowright 80s linear infinite;
 }
+
+.cover-movie {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .main-cover {
     background-size: auto;
