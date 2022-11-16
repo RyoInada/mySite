@@ -15,6 +15,9 @@ export const Darkmode = (props) => {
     const docBody = props.root;
     docBody.classList.toggle("darkmode");
     sessionStorage["is-dark"] = Number(sessionStorage.getItem("is-dark")) + 1;
+    if (window.innerWidth < 769) {
+      document.location.reload();
+    }
   };
   return (
     <div className="js-darkmode" onClick={darkmodeSwitch}>
