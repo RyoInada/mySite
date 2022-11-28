@@ -30,15 +30,16 @@ function App(props) {
       };
 
       momentumScroll(target);
-      window.addEventListener("scroll", () => {
-        momentumScroll(target);
-      });
-    }
-    window.addEventListener("resize", () => {
       if (window.innerWidth > 768) {
-        document.location.reload();
+        window.addEventListener("scroll", () => {
+          momentumScroll(target);
+        });
       }
-    });
+    } // window.addEventListener("resize", () => {
+    //   if (window.innerWidth > 768) {
+    //     document.location.reload();
+    //   }
+    // });
   });
   return (
     <>
